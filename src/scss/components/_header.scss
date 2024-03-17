@@ -1,13 +1,20 @@
 .header {
-    position: fixed;
-    width: 100vw;
+    padding-top: 80px;
+
+    &__wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
 .header__top {
-    position: relative;
+    position: fixed;
+    width: 1920px;
     background-color: var(--dark-green);
     min-height: 80px;
+    top: 0;
     display: flex;
     justify-content: space-between;
     padding-left: 50px;
@@ -109,6 +116,12 @@
 
 .image {}
 
+@media(max-width: 1950px) {
+    .header__top {
+        width: calc(100% - 30px);
+    }
+}
+
 @media(max-width: 1300px) {
 
     .header__top {
@@ -140,7 +153,7 @@
         position: fixed;
         flex-direction: column;
         height: auto;
-        background-color: var(--dark-green);
+        background-color: var(--light-green);
         width: calc(100% - 30px);
         top: 80px;
         left: 15px;

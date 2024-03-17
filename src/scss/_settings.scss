@@ -2,6 +2,20 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  min-width: 320px;
+  height: 100%;
+  background-image: url(../img/20-2x.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -36,7 +50,8 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
