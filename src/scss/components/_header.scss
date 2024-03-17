@@ -1,0 +1,148 @@
+.header {
+    position: fixed;
+    width: 100vw;
+}
+
+
+.header__top {
+    position: relative;
+    background-color: var(--dark-green);
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 11%;
+    font-size: 17px;
+}
+
+
+.menu__btn {
+    display: none;
+}
+
+
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-item a {
+    @extend %Inter-400;
+    padding: 7px 10px;
+    font-size: inherit;
+    color: var(--white);
+    border-radius: 9px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color .5s ease-in-out;
+
+    &:hover {
+        background-color: var(--white);
+        color: var(--dark-green);
+    }
+}
+
+.header__contact {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+
+    a {
+        position: relative;
+        cursor: pointer;
+        color: var(--white);
+        @extend %Inter-400;
+        font-size: inherit;
+        border-radius: 9px;
+        padding: 5px 10px;
+        transition: background-color .5s ease-in-out;
+
+        &::before {
+            content: '';
+            background-image: url('../img/svg/phone.svg');
+            background-repeat: no-repeat;
+            background-size: 31px 31px;
+            position: absolute;
+            width: 31px;
+            height: 31px;
+            left: -40px;
+        }
+
+        &:hover {
+            background-color: var(--white);
+            color: var(--dark-green);
+        }
+    }
+}
+
+.header__bottom {}
+
+@media(max-width: 1300px) {
+
+    .header__top {
+        padding-left: 30px;
+        padding-right: 70px;
+        font-size: 15px;
+    }
+
+    .menu-list {
+        gap: 10px;
+    }
+
+}
+
+@media(max-width: 900px) {
+
+
+    .menu__btn {
+
+        display: block;
+        // @include burger;
+        right: 36px;
+        top: 23px;
+    }
+
+
+    .menu-list {
+        transform: translateY(-200%);
+        position: fixed;
+        flex-direction: column;
+        height: auto;
+        background-color: var(--dark-green);
+        width: calc(100% - 30px);
+        top: 80px;
+        left: 15px;
+        padding: 20px;
+        gap: 25px;
+        transition: transform .5s ease-in-out;
+    }
+
+    .menu-list.menu--active {
+        transform: translateY(0%);
+    }
+
+
+}
+
+@media(max-width: 576px) {
+
+
+
+    .header__contact {
+        height: 40px;
+
+        a {
+            font-size: 0;
+            width: 0;
+            padding: 0;
+
+            &::before {
+                left: -50px;
+                top: 4px;
+            }
+        }
+    }
+}

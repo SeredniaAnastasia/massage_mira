@@ -1,0 +1,19 @@
+// базовые подключения
+@import "vendor/normalize";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/logo";
+
+
+// тестовые стили, удалите их
+.page__body {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // height: var(--vh);
+}
