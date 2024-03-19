@@ -16,14 +16,14 @@ export const validateForms = (selector, rules, afterSend) => {
   }
 
   if (telSelector) {
-    const inputMask = new Inputmask('+7 (999) 999-99-99');
+    const inputMask = new Inputmask('+420 999-999-999');
     inputMask.mask(telSelector);
 
     for (let item of rules) {
       if (item.tel) {
         item.rules.push({
           rule: 'function',
-          validator: function() {
+          validator: function () {
             const phone = telSelector.inputmask.unmaskedvalue();
             return phone.length === 10;
           },

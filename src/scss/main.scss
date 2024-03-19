@@ -1,16 +1,18 @@
 // базовые подключения
-@import "vendor/normalize";
+@import "fonts";
 @import "vars";
 @import "mixins";
-@import "fonts";
 @import "settings";
-
+@import "mixins/validate";
 // подключения компонентов страницы
 @import "./components/header";
 @import "./components/logo";
 @import "./components/about";
 @import "./components/services";
+@import "./components/price";
 @import "./components/card";
+@import "./components/contact";
+@import "./components/footer";
 
 
 

@@ -5,15 +5,26 @@ html {
 body {
   min-width: 320px;
   height: 100%;
-  background-image: url(../img/20-2x.webp);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-image: url(../img/20-2x.jpg);
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
   background-size: cover;
   background-color: #FFFFFF;
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+body:before {
+  background: url("../img/20-2x.jpg") no-repeat 50% / cover;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
 }
 
 *,
@@ -46,12 +57,16 @@ a {
 }
 
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  // overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .is-hidden {
   display: none !important;
-  /* stylelint-disable-line declaration-no-important */
+
 }
 
 .btn-reset {
@@ -98,6 +113,7 @@ a {
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
 }
+
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;

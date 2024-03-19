@@ -1,0 +1,112 @@
+.footer {
+    @extend %Inter-400;
+    font-size: 18px;
+    color: #fff;
+}
+
+.container {}
+
+.footer__top {
+    padding: 10px;
+    background-color: var(--light-green);
+}
+
+.footer__top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    min-height: 240px;
+}
+
+.footer__info {}
+
+.logo {}
+
+.footer__address {
+    padding-top: 15px;
+    max-width: 200px;
+}
+
+.footer__contact {}
+
+.footer__title {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+
+.footer__phone {
+    color: #fff;
+    transition: color .3s;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+
+.footer__email {
+    color: #fff;
+    transition: color .3s;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+.footer__opening-hours {}
+
+.opening-hours {}
+
+.day {
+    float: left;
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.time {
+    float: left;
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.footer__bottom {
+    background-color: var(--dark-green);
+
+}
+
+.footer__bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 50px;
+    padding: 5px;
+}
+
+.copyright a {
+    color: #fff;
+}
+
+.webdesign a {
+    color: #fff;
+}
+
+@media(max-width: 775px) {
+    .footer {
+        font-size: 15px;
+    }
+}
+
+
+@media(max-width: 575px) {
+
+    .footer__title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}

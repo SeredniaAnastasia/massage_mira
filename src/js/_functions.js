@@ -77,10 +77,27 @@ import { burger } from './functions/burger';
 // });
 
 // import { validateForms } from './functions/validate-forms';
-// const rules1 = [...];
+// const rules1 = [
+//     {
+//         name: {
+//             required: true,
+//             minLength: 2,
+//             maxLength: 30
+//         },
+//         tel: {
+//             required: true,
+
+//         },
+//     }
+
+
+// ];
 
 // const afterForm = () => {
-//   console.log('Произошла отправка, тут можно писать любые действия');
+//     console.log('Произошла отправка, тут можно писать любые действия');
 // };
 
-// validateForms('.form-1', rules1, afterForm);
+// validateForms('#form', rules1, afterForm);
+
+
+import './functions/my-validate-form';

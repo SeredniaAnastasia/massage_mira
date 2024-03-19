@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="cs" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="container">
+
+        <section class="price">
+          <h2 class="price__title">Ceník masáží</h2>
+
+
+
+          <table class="price__table">
+            <tbody>
+              <tr class="price__table-header">
+                <td colspan="4">Rozpis ceníku masáží</td>
+              </tr>
+              <tr class="price__table-popis">
+                <td class="col-1">Druh masáže</td>
+                <td class="col-2 regular">Čas</td>
+                <td class="col-3 regular">Cena</td>
+              </tr>
+              <tr>
+                <td class="col-1">Celková masáž</td>
+                <td class="col-2">160 min.</td>
+                <td class="col-3">2 160 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">&nbsp;</td>
+                <td class="col-2">hodinová</td>
+                <td class="col-3">1 200 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Masáž šíje</td>
+                <td class="col-2">30 min.</td>
+                <td class="col-3">500 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Masáž nohou</td>
+                <td class="col-2">30 min.</td>
+                <td class="col-3">500 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Masáž zad</td>
+                <td class="col-2">30 min.</td>
+                <td class="col-3">500 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Masáž rukou</td>
+                <td class="col-2">20 min.</td>
+                <td class="col-3">240 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Masáž hýždě</td>
+                <td class="col-2">10 min.</td>
+                <td class="col-3">180 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Masáž břicha</td>
+                <td class="col-2">10 min.</td>
+                <td class="col-3">180 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Lymfatická masáž</td>
+                <td class="col-2">30 min.</td>
+                <td class="col-3">500 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">&nbsp;</td>
+                <td class="col-2">45 min.</td>
+                <td class="col-3">900 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">&nbsp;</td>
+                <td class="col-2">hodinová</td>
+                <td class="col-3">1 080 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">&nbsp;</td>
+                <td class="col-2">90 min.</td>
+                <td class="col-3">1 680 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">&nbsp;</td>
+                <td class="col-2">120 min.</td>
+                <td class="col-3">2 160 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Lávové kameny k celkové a hodinové masáži</td>
+                <td class="col-2">&nbsp;</td>
+                <td class="col-3">zdarma</td>
+              </tr>
+              <tr>
+                <td class="col-1">Masáž zad lávovými kameny</td>
+                <td class="col-2">30 min.</td>
+                <td class="col-3">500 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Masáž nohou lávovými kameny</td>
+                <td class="col-2">30 min.</td>
+                <td class="col-3">500 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Baňková masáž</td>
+                <td class="col-2">30 min.</td>
+                <td class="col-3">500 Kč</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+
+      </div>
+    </main>
+    @include('partials/footer.html')
+    <!-- @include('html/h1.html') пример include -->
+  </div>
+</body>
+
+</html>

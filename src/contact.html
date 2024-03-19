@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cs" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+
+      <section class="contact">
+        <div class="contact__wrapper">
+          <form id="form">
+            <input type="hidden" name="project_name" value="marcho">
+            <input type="hidden" name="admin_email" value="seredniimykola@gmail.com">
+            <input type="hidden" name="form_subject" value="Marcho">
+            <div class="mb-3 formDetails">
+              <input class="input-active form-control" type="text" name="form_jmeno" id="name" value="Vaše jméno"
+                onclick="this.style.backgroundColor = '#FFFFFF'" onfocus="if(this.value=='Vaše jméno'){this.value=''}"
+                ;="" style="background-color: rgb(255, 255, 255);">
+              <div class="errorMessage"></div>
+            </div>
+            <div class="mb-3 formDetails">
+              <input class="input-active form-control" type="email" name="form_mail" id="email" value="e-mail"
+                onclick="this.style.backgroundColor = '#FFFFFF'" onfocus="if(this.value=='e-mail'){this.value=''}" ;="">
+              <div class="errorMessage"></div>
+            </div>
+            <div class="form-outline mb-3 formDetails" style="width: 100%;">
+              <input class="input-active form-control" type="tel" name="form_telefon" id="tel" value="+420 "
+                onclick="this.style.backgroundColor = '#FFFFFF'" onfocus="if(this.value=='Telefon'){this.value=''}"
+                ;="">
+              <div class="errorMessage"></div>
+            </div>
+
+            <div class="mb-3 formDetails">
+              <input class="input-active form-control" type="text" name="theme" id="theme" value="Předmět zprávy"
+                onclick="this.style.backgroundColor = '#FFFFFF'"
+                onfocus="if(this.value=='Předmět zprávy'){this.value=''}" ;=""
+                style="background-color: rgb(255, 255, 255);">
+              <div class="errorMessage"></div>
+            </div>
+
+            <div class="mb-3 formDetails">
+              <!-- <textarea class="form-control" name="form_text" id="form_text" rows="9" cols="50"
+                onclick="this.style.backgroundColor = '#FFFFFF'" onfocus="if(this.value=='Text zprávy'){this.value=''}"
+                onblur="if(this.value==''){this.value=this.defaultValue}" ;=""
+                style="background-color: rgb(255, 255, 255);">Text zprávy</textarea> -->
+              <textarea class="form-control" name="form_text" id="form_text" rows="9" cols="50"
+                onclick="this.style.backgroundColor = '#FFFFFF'" onfocus="if(this.value=='Text zprávy'){this.value=''}"
+                ;="" style="background-color: rgb(255, 255, 255);">Text zprávy</textarea>
+              <div class="errorMessage"></div>
+            </div>
+
+            <div class="mb-3 form-check formDetails">
+              <input type="checkbox" class="form-check-input" id="checked">
+              <div class="errorMessage"></div>
+              <label class="form-check-label" for="checked"> Souhlasím se zpracováním osobních údajů </label>
+              <div class="errorMessage"></div>
+            </div>
+
+            <input type="text" id="anti_bot" name=":" style="display: none" value="" />
+            <div class="mb-3 form-check">
+              <img class="img-captcha" src="./captcha.php" />
+            </div>
+            <div class="mb-3 form-check">
+              <input class="contact__form-input input-captcha" type="text" name="kapcha" />
+            </div>
+            <input class="button" value="Odeslat zprávu" type="submit">
+          </form>
+        </div>
+      </section>
+
+    </main>
+    @include('partials/footer.html')
+    <!-- @include('html/h1.html') пример include -->
+  </div>
+</body>
+
+</html>
