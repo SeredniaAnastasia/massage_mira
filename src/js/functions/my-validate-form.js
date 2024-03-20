@@ -1,5 +1,6 @@
 
-const mailPath = 'http://marcho.smm.zzz.com.ua/send-mail.php';
+const mailPath = '/send-mail.php';
+const myForm = document.getElementById('form');
 
 function formDataToObject(formData) {
     let jsonObject = {};
@@ -12,7 +13,6 @@ function formDataToObject(formData) {
 
 const submit = (myForm) => {
     const data = formDataToObject(new FormData(myForm))
-    console.log(data)
 
     fetch(mailPath, {
         method: 'POST',
@@ -21,7 +21,6 @@ const submit = (myForm) => {
         credentials: 'same-origin', // include, *same-origin, omit
         headers: {
             'Content-Type': 'application/json' //application/json  multipart/form-data
-            // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         redirect: 'follow', // manual, *follow, error
         referrerPolicy: 'no-referrer', // no-referrer, *client
@@ -29,35 +28,46 @@ const submit = (myForm) => {
     })
         .then(response => response.json())
         .then(result => {
-            // Обробка відповіді від сервера
+
+            console.log(result)
+            const captchaError = document.querySelector('#captcha + .errorMessage');
+            const captchaInput = document.getElementById('captcha');
             if (result.success) {
-                alert("The letter has been sent");
-                clearForm(e)
+                alert("Dopis byl odeslán");
+                captchaError.textContent = '';
+                captchaInput.parentNode.classList.add('success');
+                captchaInput.parentNode.classList.remove('error');
+                window.location.reload();
             } else {
-                alert("Письмо не отправлено произошла ошибка:  " + result.message);
+                alert("Zpráva nebyla odeslána, došlo k chybě:  " + result.message);
+
+                if (result.captcha === "error") {
+                    captchaError.textContent = 'Captcha zadán nesprávně';
+                    captchaInput.parentNode.classList.add('error');
+                    captchaInput.parentNode.classList.remove('success');
+                } else if (result.captcha === "undefined") {
+                    alert("Zpráva nebyla odeslána, došlo k chybě:  " + result.message);
+                } else {
+                    captchaError.textContent = '';
+                    captchaInput.parentNode.classList.add('success');
+                    captchaInput.parentNode.classList.remove('error');
+                }
             }
         })
         .catch(error => {
-            console.error('Помилка:', error);
+            console.error('Error:', error);
         });
 }
 
 
-
-
-
-const myForm = document.getElementById('form');
-
-myForm.addEventListener('submit', (event) => {
+myForm?.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    console.log(myForm.elements)
-
-    const name = myForm.elements.name.value.trim();
+    const name = event.elements.name.value.trim();
     const nameError = document.querySelector('#name + .errorMessage');
     const nameInput = document.getElementById('name');
     if (name === '' || name.length < 3) {
-        nameError.textContent = 'Name is required.';
+        nameError.textContent = 'Napište jméno';
         nameInput.parentNode.classList.add('error');
         nameInput.parentNode.classList.remove('success');
     } else {
@@ -67,12 +77,12 @@ myForm.addEventListener('submit', (event) => {
     }
 
 
-    const email = myForm.elements.email.value.trim();
+    const email = event.elements.email.value.trim();
     const emailError = document.querySelector('#email + .errorMessage');
     const emailInput = document.getElementById('email');
 
     if (email === '') {
-        emailError.textContent = 'Email is required.';
+        emailError.textContent = 'Zadejte e-mail';
         emailInput.parentNode.classList.add('error');
         emailInput.parentNode.classList.remove('success');
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -85,20 +95,16 @@ myForm.addEventListener('submit', (event) => {
         emailInput.parentNode.classList.remove('error');
     }
 
-
-
-    const tel = myForm.elements.tel.value.trim();
+    const tel = event.elements.tel.value.trim();
     const telError = document.querySelector('#tel + .errorMessage');
     const telInput = document.getElementById('tel');
 
     if (tel === '') {
-        telError.textContent = 'tel is required.';
+        telError.textContent = 'Vložte telefonní číslo';
         telInput.parentNode.classList.add('error');
         telInput.parentNode.classList.remove('success');
-        // } else if (!/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{3})/.test(tel)) {
-    } else if (false) {
-
-        telError.textContent = 'Please enter a valid telephone number.';
+    } else if (!/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{3})/.test(tel)) {
+        telError.textContent = 'Zadejte prosím platné telefonní číslo.';
         telInput.parentNode.classList.add('error');
         telInput.parentNode.classList.remove('success');
     } else {
@@ -108,12 +114,12 @@ myForm.addEventListener('submit', (event) => {
     }
 
 
-    const theme = myForm.elements.theme.value.trim();
+    const theme = event.elements.theme.value.trim();
     const themeError = document.querySelector('#theme + .errorMessage');
     const themeInput = document.getElementById('theme');
 
     if (theme === '') {
-        themeError.textContent = 'theme is required.';
+        themeError.textContent = 'Motiv je povinný.';
         themeInput.parentNode.classList.add('error');
         themeInput.parentNode.classList.remove('success');
     } else {
@@ -123,12 +129,12 @@ myForm.addEventListener('submit', (event) => {
     }
 
 
-    const formText = myForm.elements.form_text.value.trim();
+    const formText = event.elements.form_text.value.trim();
     const form_textError = document.querySelector('#form_text + .errorMessage');
     const form_textInput = document.getElementById('form_text');
 
     if (formText === '') {
-        form_textError.textContent = 'theme is required.';
+        form_textError.textContent = 'Nenapsali jste zprávu';
         form_textInput.parentNode.classList.add('error');
         form_textInput.parentNode.classList.remove('success');
     } else {
@@ -137,11 +143,11 @@ myForm.addEventListener('submit', (event) => {
         form_textInput.parentNode.classList.remove('error');
     }
 
-    const checked = myForm.elements.checked.checked
+    const checked = event.elements.checked.checked
     const checkedError = document.querySelector('#checked + .errorMessage');
     const checkedInput = document.getElementById('checked');
     if (!checked) {
-        checkedError.textContent = 'checked is required.';
+        checkedError.textContent = 'Souhlasím se zpracováním osobních údajů';
         checkedInput.parentNode.classList.add('error');
         checkedInput.parentNode.classList.remove('success');
     } else {
@@ -150,13 +156,11 @@ myForm.addEventListener('submit', (event) => {
         checkedInput.parentNode.classList.remove('error');
     }
 
-    const antiBot = myForm.elements.anti_bot.value
+    const antiBot = event.elements.anti_bot.value
     let antiBotError = true
     if (antiBot !== "") {
         antiBot = false
     }
-
-
 
     if (nameError.textContent === ''
         && emailError.textContent === ''
@@ -166,11 +170,8 @@ myForm.addEventListener('submit', (event) => {
         && checkedError.textContent === ''
         && antiBotError
     ) {
-        submit(myForm);
+        submit(event);
     }
-
-
-
 
 })
 

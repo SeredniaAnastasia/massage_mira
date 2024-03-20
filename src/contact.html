@@ -41,10 +41,6 @@
             </div>
 
             <div class="mb-3 formDetails">
-              <!-- <textarea class="form-control" name="form_text" id="form_text" rows="9" cols="50"
-                onclick="this.style.backgroundColor = '#FFFFFF'" onfocus="if(this.value=='Text zprávy'){this.value=''}"
-                onblur="if(this.value==''){this.value=this.defaultValue}" ;=""
-                style="background-color: rgb(255, 255, 255);">Text zprávy</textarea> -->
               <textarea class="form-control" name="form_text" id="form_text" rows="9" cols="50"
                 onclick="this.style.backgroundColor = '#FFFFFF'" onfocus="if(this.value=='Text zprávy'){this.value=''}"
                 ;="" style="background-color: rgb(255, 255, 255);">Text zprávy</textarea>
@@ -60,10 +56,11 @@
 
             <input type="text" id="anti_bot" name=":" style="display: none" value="" />
             <div class="mb-3 form-check">
-              <img class="img-captcha" src="./captcha.php" />
+              <img class="img-captcha" <?php src="captcha.php" ?>
             </div>
-            <div class="mb-3 form-check">
-              <input class="contact__form-input input-captcha" type="text" name="kapcha" />
+            <div class="mb-3 form-check formDetails">
+              <input class="contact__form-input input-captcha" id="captcha" type="text" name="captcha" />
+              <div class="errorMessage"></div>
             </div>
             <input class="button" value="Odeslat zprávu" type="submit">
           </form>
@@ -72,7 +69,6 @@
 
     </main>
     @include('partials/footer.html')
-    <!-- @include('html/h1.html') пример include -->
   </div>
 </body>
 

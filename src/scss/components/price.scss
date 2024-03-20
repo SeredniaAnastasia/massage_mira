@@ -5,7 +5,7 @@
     margin: 0 -10px 100px;
 
     &__title {
-        @extend %Asap-600;
+        // @extend %Asap-600;
         font-size: 28px;
         color: #fff;
         padding-left: 10px;
@@ -21,13 +21,12 @@
         text-align: left;
 
         tr {
-            @extend %Asap-400;
+            // @extend %Asap-400;
             font-size: 20px;
             color: #000;
 
             .col-1 {
                 width: 40%;
-
             }
 
             .col-2 {
@@ -43,7 +42,6 @@
         td {
             padding: 10px;
             padding-left: 30px;
-
         }
 
         tr+tr+tr {
@@ -54,7 +52,7 @@
     }
 
     &__table-header {
-        @extend %Asap-400;
+        // @extend %Asap-400;
         font-size: 20px;
         color: #fff;
         height: 60px;
@@ -64,33 +62,10 @@
     &__table-popis {
         height: 60px;
         background-color: var(--dark-green);
-        @extend %Asap-400;
+        // @extend %Asap-400;
         font-size: 20px;
         color: #fff;
     }
-
-
-    .content-section {}
-
-    .clearfix {}
-
-    .section-popis {}
-
-    .light {}
-
-    .header {}
-
-    .semi-bold {}
-
-    .popis {}
-
-    .col-1 {}
-
-    .col-2 {}
-
-    .regular {}
-
-    .col-3 {}
 
     @media(max-width: 576px) {
 
