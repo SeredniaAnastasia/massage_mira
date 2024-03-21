@@ -1,11 +1,11 @@
-// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+// @include font-face("Muller", "/fonts/MullerRegular", 400, normal);
 @font-face {
     font-family: 'Asap-Regular';
     font-weight: 400;
     font-style: normal;
     src: local('Asap-Regular'),
-        url('../fonts/Asap-Regular.woff2') format('embedded-opentype'),
-        url('../fonts/Asap-Regular.woff') format('embedded-opentype');
+        url('/fonts/Asap-Regular.woff2') format('embedded-opentype'),
+        url('/fonts/Asap-Regular.woff') format('embedded-opentype');
     font-display: swap;
 }
 
@@ -14,8 +14,8 @@
     font-weight: 600;
     font-style: normal;
     src: local('Asap-SemiBold'),
-        url('../fonts/Asap-SemiBold.woff2') format('embedded-opentype'),
-        url('../fonts/Asap-SemiBold.woff') format('embedded-opentype');
+        url('/fonts/Asap-SemiBold.woff2') format('embedded-opentype'),
+        url('/fonts/Asap-SemiBold.woff') format('embedded-opentype');
     font-display: swap;
 }
 
@@ -24,8 +24,8 @@
     font-weight: 200;
     font-style: normal;
     src: local('Inter-ExtraLight'),
-        url('../fonts/Inter-ExtraLight.woff2') format('embedded-opentype'),
-        url('../fonts/Inter-ExtraLight.woff') format('embedded-opentype');
+        url('/fonts/Inter-ExtraLight.woff2') format('embedded-opentype'),
+        url('/fonts/Inter-ExtraLight.woff') format('embedded-opentype');
     font-display: swap;
 }
 
@@ -34,8 +34,8 @@
     font-weight: 500;
     font-style: normal;
     src: local('Inter-Medium'),
-        url('../fonts/Inter-Medium.woff2') format('embedded-opentype'),
-        url('../fonts/Inter-Medium.woff') format('embedded-opentype');
+        url('/fonts/Inter-Medium.woff2') format('embedded-opentype'),
+        url('/fonts/Inter-Medium.woff') format('embedded-opentype');
     font-display: swap;
 }
 
@@ -44,8 +44,8 @@
     font-weight: 400;
     font-style: normal;
     src: local('Inter-Regular'),
-        url('../fonts/Inter-Regular.woff2') format('embedded-opentype'),
-        url('../fonts/Inter-Regular.woff') format('embedded-opentype');
+        url('/fonts/Inter-Regular.woff2') format('embedded-opentype'),
+        url('/fonts/Inter-Regular.woff') format('embedded-opentype');
     font-display: swap;
 }
 
@@ -54,8 +54,8 @@
     font-weight: 500;
     font-style: normal;
     src: local('Karma-Medium'),
-        url('../fonts/Karma-Medium.woff2') format('embedded-opentype'),
-        url('../fonts/Karma-Medium.woff') format('embedded-opentype');
+        url('/fonts/Karma-Medium.woff2') format('embedded-opentype'),
+        url('/fonts/Karma-Medium.woff') format('embedded-opentype');
     font-display: swap;
 }
 
@@ -64,7 +64,7 @@
     font-weight: 400;
     font-style: normal;
     src: local('OpenSans-Regular'),
-        url('../fonts/OpenSans-Regular.woff2') format('embedded-opentype'),
-        url('../fonts/OpenSans-Regular.woff') format('embedded-opentype');
+        url('/fonts/OpenSans-Regular.woff2') format('embedded-opentype'),
+        url('/fonts/OpenSans-Regular.woff') format('embedded-opentype');
     font-display: swap;
 }

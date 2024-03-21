@@ -5,7 +5,7 @@
     margin: 0 -10px 100px;
 
     &__title {
-        // @extend %Asap-600;
+        @extend %Asap-600;
         font-size: 28px;
         color: #fff;
         padding-left: 10px;
@@ -16,12 +16,11 @@
         border-spacing: 0;
         width: 100%;
         height: auto;
-        // font-size: 1rem;
         line-height: 1;
         text-align: left;
 
         tr {
-            // @extend %Asap-400;
+            @extend %Asap-400;
             font-size: 20px;
             color: #000;
 

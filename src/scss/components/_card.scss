@@ -4,10 +4,6 @@
     .services__card {
         display: flex;
         column-gap: 27px;
-
-
-
-
     }
 
     .card__img__wrapper {
@@ -36,7 +32,8 @@
     }
 
     .card__title {
-        // @extend %Inter-400;
+        @extend %Inter-500;
+        font-weight: 600;
         font-size: 24px;
 
         p {
@@ -45,7 +42,7 @@
     }
 
     .card__btn {
-        // @extend %Karma-500;
+        @extend %Karma-500;
         font-size: 20px;
         min-width: 170px;
         height: 43px;

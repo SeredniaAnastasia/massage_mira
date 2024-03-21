@@ -15,35 +15,26 @@
             <input type="hidden" name="admin_email" value="seredniimykola@gmail.com">
             <input type="hidden" name="form_subject" value="Marcho">
             <div class="mb-3 formDetails">
-              <input class="input-active form-control" type="text" name="form_jmeno" id="name" value="Vaše jméno"
-                onclick="this.style.backgroundColor = '#FFFFFF'" onfocus="if(this.value=='Vaše jméno'){this.value=''}"
-                ;="" style="background-color: rgb(255, 255, 255);">
+              <input class="input-active form-control" type="text" name="form_jmeno" id="name" placeholder="Vaše jméno">
               <div class="errorMessage"></div>
             </div>
             <div class="mb-3 formDetails">
-              <input class="input-active form-control" type="email" name="form_mail" id="email" value="e-mail"
-                onclick="this.style.backgroundColor = '#FFFFFF'" onfocus="if(this.value=='e-mail'){this.value=''}" ;="">
+              <input class="input-active form-control" type="email" name="form_mail" id="email" placeholder="e-mail">
               <div class="errorMessage"></div>
             </div>
             <div class="form-outline mb-3 formDetails" style="width: 100%;">
-              <input class="input-active form-control" type="tel" name="form_telefon" id="tel" value="+420 "
-                onclick="this.style.backgroundColor = '#FFFFFF'" onfocus="if(this.value=='Telefon'){this.value=''}"
-                ;="">
+              <input class="input-active form-control" type="tel" name="form_telefon" id="tel" placeholder="+420 ">
               <div class="errorMessage"></div>
             </div>
 
             <div class="mb-3 formDetails">
-              <input class="input-active form-control" type="text" name="theme" id="theme" value="Předmět zprávy"
-                onclick="this.style.backgroundColor = '#FFFFFF'"
-                onfocus="if(this.value=='Předmět zprávy'){this.value=''}" ;=""
-                style="background-color: rgb(255, 255, 255);">
+              <input class="input-active form-control" type="text" name="theme" id="theme" placeholder="Předmět zprávy">
               <div class="errorMessage"></div>
             </div>
 
             <div class="mb-3 formDetails">
               <textarea class="form-control" name="form_text" id="form_text" rows="9" cols="50"
-                onclick="this.style.backgroundColor = '#FFFFFF'" onfocus="if(this.value=='Text zprávy'){this.value=''}"
-                ;="" style="background-color: rgb(255, 255, 255);">Text zprávy</textarea>
+                placeholder="Text zprávy"></textarea>
               <div class="errorMessage"></div>
             </div>
 
@@ -56,7 +47,7 @@
 
             <input type="text" id="anti_bot" name=":" style="display: none" value="" />
             <div class="mb-3 form-check">
-              <img class="img-captcha" <?php src="captcha.php" ?>
+              <img class="img-captcha" src="captcha.php" alt="Captcha">
             </div>
             <div class="mb-3 form-check formDetails">
               <input class="contact__form-input input-captcha" id="captcha" type="text" name="captcha" />

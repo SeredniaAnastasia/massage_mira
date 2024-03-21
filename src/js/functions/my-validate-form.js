@@ -63,7 +63,7 @@ const submit = (myForm) => {
 myForm?.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const name = event.elements.name.value.trim();
+    const name = event.target.elements.name.value.trim();
     const nameError = document.querySelector('#name + .errorMessage');
     const nameInput = document.getElementById('name');
     if (name === '' || name.length < 3) {
@@ -77,7 +77,7 @@ myForm?.addEventListener('submit', (event) => {
     }
 
 
-    const email = event.elements.email.value.trim();
+    const email = event.target.elements.email.value.trim();
     const emailError = document.querySelector('#email + .errorMessage');
     const emailInput = document.getElementById('email');
 
@@ -95,7 +95,7 @@ myForm?.addEventListener('submit', (event) => {
         emailInput.parentNode.classList.remove('error');
     }
 
-    const tel = event.elements.tel.value.trim();
+    const tel = event.target.elements.tel.value.trim();
     const telError = document.querySelector('#tel + .errorMessage');
     const telInput = document.getElementById('tel');
 
@@ -114,7 +114,7 @@ myForm?.addEventListener('submit', (event) => {
     }
 
 
-    const theme = event.elements.theme.value.trim();
+    const theme = event.target.elements.theme.value.trim();
     const themeError = document.querySelector('#theme + .errorMessage');
     const themeInput = document.getElementById('theme');
 
@@ -129,7 +129,7 @@ myForm?.addEventListener('submit', (event) => {
     }
 
 
-    const formText = event.elements.form_text.value.trim();
+    const formText = event.target.elements.form_text.value.trim();
     const form_textError = document.querySelector('#form_text + .errorMessage');
     const form_textInput = document.getElementById('form_text');
 
@@ -143,7 +143,7 @@ myForm?.addEventListener('submit', (event) => {
         form_textInput.parentNode.classList.remove('error');
     }
 
-    const checked = event.elements.checked.checked
+    const checked = event.target.elements.checked.checked
     const checkedError = document.querySelector('#checked + .errorMessage');
     const checkedInput = document.getElementById('checked');
     if (!checked) {
@@ -156,7 +156,7 @@ myForm?.addEventListener('submit', (event) => {
         checkedInput.parentNode.classList.remove('error');
     }
 
-    const antiBot = event.elements.anti_bot.value
+    const antiBot = event.target.elements.anti_bot.value
     let antiBotError = true
     if (antiBot !== "") {
         antiBot = false
@@ -170,7 +170,7 @@ myForm?.addEventListener('submit', (event) => {
         && checkedError.textContent === ''
         && antiBotError
     ) {
-        submit(event);
+        submit(event.target);
     }
 
 })

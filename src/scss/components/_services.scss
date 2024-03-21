@@ -1,0 +1,25 @@
+.services {
+
+    .services__list {
+        max-width: 1420px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .services__title {
+        margin-bottom: 80px;
+        font-size: 36px;
+        text-align: center;
+        @extend %Asap-600;
+
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    .services__item {
+        margin-bottom: 110px;
+    }
+
+}

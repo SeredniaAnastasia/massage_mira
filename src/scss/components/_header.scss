@@ -1,5 +1,6 @@
 .header {
     padding-top: 80px;
+    margin-bottom: 50px;
 
 }
 
@@ -60,6 +61,11 @@
             color: var(--dark-green);
         }
     }
+}
+
+.active-page {
+    background-color: var(--white) !important;
+    color: var(--dark-green) !important;
 }
 
 .header__contact {
