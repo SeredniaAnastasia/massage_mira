@@ -5,14 +5,18 @@
 
 <body class="page__body">
   <div class="site-container">
-    @include('partials/header.html')
+    @include('partials/header.html',{
+    "index": "xxxx",
+    "price": "active-page",
+    "contact": "xxxx"
+    })
     <main class="main">
       <div class="container">
 
         <section class="price">
           <h2 class="price__title">Ceník masáží</h2>
 
-
+          <!-- Šíje Ruka. Noha zezadu Noha zepředu Břicho. Hýždě Masáž záda Kč celého těla. Individuální na míru dle domluvy -->
 
           <table class="price__table">
             <tbody>
@@ -25,89 +29,47 @@
                 <td class="col-3 regular">Cena</td>
               </tr>
               <tr>
-                <td class="col-1">Celková masáž</td>
-                <td class="col-2">160 min.</td>
-                <td class="col-3">2 160 Kč</td>
+                <td colspan="4">Masáž individuální na míru dle domluvy</td>
               </tr>
               <tr>
-                <td class="col-1">&nbsp;</td>
-                <td class="col-2">hodinová</td>
-                <td class="col-3">1 200 Kč</td>
+                <td class="col-1">Masáž celého těla</td>
+                <td class="col-2">2 hod.</td>
+                <td class="col-3">1 500 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Masáž zada</td>
+                <td class="col-2">1 hod.</td>
+                <td class="col-3">800 Kč</td>
               </tr>
               <tr>
                 <td class="col-1">Masáž šíje</td>
-                <td class="col-2">30 min.</td>
+                <td class="col-2">30-40 min.</td>
+                <td class="col-3">450 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Masáž ruka</td>
+                <td class="col-2">30-40 min.</td>
+                <td class="col-3">450 Kč</td>
+              </tr>
+              <tr>
+                <td class="col-1">Masáž noha zezadu</td>
+                <td class="col-2">30-40 min.</td>
                 <td class="col-3">500 Kč</td>
               </tr>
               <tr>
-                <td class="col-1">Masáž nohou</td>
-                <td class="col-2">30 min.</td>
+                <td class="col-1">Masáž noha zepředu</td>
+                <td class="col-2">30-40 min.</td>
                 <td class="col-3">500 Kč</td>
-              </tr>
-              <tr>
-                <td class="col-1">Masáž zad</td>
-                <td class="col-2">30 min.</td>
-                <td class="col-3">500 Kč</td>
-              </tr>
-              <tr>
-                <td class="col-1">Masáž rukou</td>
-                <td class="col-2">20 min.</td>
-                <td class="col-3">240 Kč</td>
-              </tr>
-              <tr>
-                <td class="col-1">Masáž hýždě</td>
-                <td class="col-2">10 min.</td>
-                <td class="col-3">180 Kč</td>
               </tr>
               <tr>
                 <td class="col-1">Masáž břicha</td>
-                <td class="col-2">10 min.</td>
-                <td class="col-3">180 Kč</td>
+                <td class="col-2">30-40 min.</td>
+                <td class="col-3">450 Kč</td>
               </tr>
               <tr>
-                <td class="col-1">Lymfatická masáž</td>
-                <td class="col-2">30 min.</td>
-                <td class="col-3">500 Kč</td>
-              </tr>
-              <tr>
-                <td class="col-1">&nbsp;</td>
-                <td class="col-2">45 min.</td>
-                <td class="col-3">900 Kč</td>
-              </tr>
-              <tr>
-                <td class="col-1">&nbsp;</td>
-                <td class="col-2">hodinová</td>
-                <td class="col-3">1 080 Kč</td>
-              </tr>
-              <tr>
-                <td class="col-1">&nbsp;</td>
-                <td class="col-2">90 min.</td>
-                <td class="col-3">1 680 Kč</td>
-              </tr>
-              <tr>
-                <td class="col-1">&nbsp;</td>
-                <td class="col-2">120 min.</td>
-                <td class="col-3">2 160 Kč</td>
-              </tr>
-              <tr>
-                <td class="col-1">Lávové kameny k celkové a hodinové masáži</td>
-                <td class="col-2">&nbsp;</td>
-                <td class="col-3">zdarma</td>
-              </tr>
-              <tr>
-                <td class="col-1">Masáž zad lávovými kameny</td>
-                <td class="col-2">30 min.</td>
-                <td class="col-3">500 Kč</td>
-              </tr>
-              <tr>
-                <td class="col-1">Masáž nohou lávovými kameny</td>
-                <td class="col-2">30 min.</td>
-                <td class="col-3">500 Kč</td>
-              </tr>
-              <tr>
-                <td class="col-1">Baňková masáž</td>
-                <td class="col-2">30 min.</td>
-                <td class="col-3">500 Kč</td>
+                <td class="col-1">Masáž hýždě</td>
+                <td class="col-2">30-40 min.</td>
+                <td class="col-3">450 Kč</td>
               </tr>
             </tbody>
           </table>

@@ -1,15 +1,15 @@
 .services {
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto;
 
-    .services__list {
-        max-width: 1420px;
-        width: 100%;
-        margin: 0 auto;
-    }
+    .services__list {}
 
     .services__title {
         margin-bottom: 80px;
         font-size: 36px;
-        text-align: center;
+        // text-align: center;
+        padding-left: 25px;
         @extend %Asap-600;
 
     }

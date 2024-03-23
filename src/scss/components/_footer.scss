@@ -24,34 +24,41 @@
         max-width: 200px;
     }
 
-    .footer__contact {}
 
     .footer__title {
         font-size: 20px;
         margin-bottom: 25px;
     }
 
-
     .footer__phone {
-        color: #fff;
-        transition: color .3s;
-
-        &:hover {
-            color: inherit;
-        }
+        margin-bottom: 10px;
     }
 
-
+    .footer__phone,
     .footer__email {
+        display: inline-block;
         color: #fff;
         transition: color .3s;
+        padding: 7px 10px;
+        border-radius: 9px;
+        transition: background-color .5s ease-in-out, color .5s ease-in-out;
 
-        &:hover {
-            color: inherit;
+        @media(hover: hover) {
+            &:hover {
+                background-color: var(--white);
+                color: var(--dark-green);
+            }
         }
+
+        @media(hover: none) {
+            &:active {
+                background-color: var(--white);
+                color: var(--dark-green);
+            }
+        }
+
+
     }
-
-
 
     .day {
         float: left;
