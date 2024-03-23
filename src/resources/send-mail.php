@@ -1,18 +1,17 @@
 <?php
 session_start();
 
-
-
 header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Headers: *, Authorization');
 header('Access-Control-Allow-Methods: *');
 header('Access-Control-Allow-Credentials: true');
 header("Content-Type: application/json; charset=UTF-8");
+$request_method = $_SERVER['REQUEST_METHOD'];
 
 $postData = file_get_contents('php://input');
 $data = json_decode($postData, true);
 
-file_put_contents('query.txt', date("d.m.y H:i:s  ") . "1" . "\r\n", FILE_APPEND);
+// file_put_contents('query.txt', date("d.m.y H:i:s  ") . "1" . "\r\n", FILE_APPEND);
 
 // Получение данных из формы регистрации (ваш HTML-формат)
 $project_name = $data['project_name'];
@@ -21,20 +20,41 @@ $form_subject  = $data['form_subject'];
 
 $user_email  = $data['email'];
 $user_phone = $data["phone"];
-$text_message = $data["text_message"];
-$text_theme = $data["text_theme"];
+$form_predmet = $data["form_predmet"];
+$form_text = $data["form_text"];
 
 $captcha = $data['captcha'];
 $validator = $data[':'];
 $message = "";
 
 
+// if ($request_method === 'POST') {
+
+
 if ($validator !=''){
   die('No bots!');
 }
 
+file_put_contents('captcha.txt', date("d.m.y H:i:s  "). "REQUEST METHOD  " . $request_method ." " . "\r\n", FILE_APPEND);
+
+
 if($captcha != $_SESSION['rand_code']) {
-   echo json_encode(["success" => false, "message" => "Captcha byl zadán nesprávně: ",  "captcha" => "error"]);
+   echo json_encode(
+	["success" => false,
+     "message" => "Captcha byl zadán nesprávně: ", 
+     "captcha" => "error", 
+     "request_method" => $request_method,
+     "SESSION rand_code" => $_SESSION['rand_code'],
+     "user_email " => $user_email ,
+     "project_name " => $project_name ,
+     "form_subject " => $form_subject ,
+     "admin_email " => $admin_email ,
+     "user_phone " => $user_phone ,
+     "captcha_text " => $captcha ,
+     "form_predmet " => $form_predmet ,
+     "form_text " => $form_text 
+	]
+);
    exit;
 }else{
 
@@ -77,5 +97,8 @@ if (mail($admin_email, adopt($form_subject) , $message, $adminHeaders )) {
            exit;
 }
 
-}
+} 
+
+
+// }
 ?>

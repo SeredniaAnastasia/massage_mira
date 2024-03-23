@@ -1,7 +1,6 @@
 .header {
     padding-top: 80px;
     margin-bottom: 50px;
-
 }
 
 
@@ -41,9 +40,9 @@
 .menu-item a {
     @extend %Inter-400;
     padding: 7px 10px;
+    border-radius: 9px;
     font-size: inherit;
     color: var(--white);
-    border-radius: 9px;
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color .5s ease-in-out, color .5s ease-in-out;
