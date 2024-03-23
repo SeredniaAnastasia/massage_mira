@@ -2,17 +2,16 @@ html {
   box-sizing: border-box;
 }
 
-body {
+.page__body {
+  min-width: 320px;
   height: 100%;
+  @extend %OpenSans-400;
+  font-size: 20px;
   background-size: cover;
   background-color: #FFFFFF;
   margin: 0;
   padding: 0;
   border: 0;
-  margin: 0;
-  min-width: 320px;
-  min-height: 100%;
-  font-size: 16px;
 }
 
 .page__body {}
