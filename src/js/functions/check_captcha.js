@@ -1,12 +1,5 @@
 
-const mailPathUrl = '/send-mail.php';
-const checkCaptchaUrl = '/captcha_check.php';
-// const checkCaptchaUrl = 'http://masaeazkvam.cz/captcha_check.php';
-// const checkCaptchaUrl = 'http://masazeazkvam.cz/captcha_check.php';
-
-
-
-
+const mailPath = '/send-mail.php';
 const myForm = document.getElementById('form');
 
 function formDataToObject(formData) {
@@ -17,26 +10,24 @@ function formDataToObject(formData) {
     return jsonObject;
 }
 
-const dataFetch = {
-    method: 'POST',
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
-    headers: {
-        'Content-Type': 'application/json' //application/json  multipart/form-data
-    },
-    redirect: 'follow', // manual, *follow, error
-    referrerPolicy: 'no-referrer', // no-referrer, *client
-}
-
-
 
 const submit = (myForm) => {
     const data = formDataToObject(new FormData(myForm))
-    dataFetch.body = JSON.stringify(data)
-    fetch(mailPathUrl, dataFetch)
+    fetch(mailPath, {
+        method: 'POST',
+        mode: 'cors', // no-cors, *cors, same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'same-origin', // include, *same-origin, omit
+        headers: {
+            'Content-Type': 'application/json' //application/json  multipart/form-data
+        },
+        redirect: 'follow', // manual, *follow, error
+        referrerPolicy: 'no-referrer', // no-referrer, *client
+        body: JSON.stringify(data),
+    })
         .then(response => response.json())
         .then(result => {
+            console.log(result)
             const captchaError = document.querySelector('#captcha + .errorMessage');
             const captchaInput = document.getElementById('captcha');
             if (result.success) {
@@ -46,10 +37,17 @@ const submit = (myForm) => {
                 captchaInput.parentNode.classList.remove('error');
                 window.location.reload();
             } else {
-                alert("Zpráva nebyla odeslána, došlo k chybě:  " + result.message);
-                captchaError.textContent = '';
-                captchaInput.parentNode.classList.add('success');
-                captchaInput.parentNode.classList.remove('error');
+                if (result.captcha === "error") {
+                    captchaError.textContent = 'Captcha zadán nesprávně';
+                    captchaInput.parentNode.classList.add('error');
+                    captchaInput.parentNode.classList.remove('success');
+                } else if (result.captcha === "undefined") {
+                    alert("Zpráva nebyla odeslána, došlo k chybě:  " + result.message);
+                } else {
+                    captchaError.textContent = '';
+                    captchaInput.parentNode.classList.add('success');
+                    captchaInput.parentNode.classList.remove('error');
+                }
             }
         })
         .catch(error => {
@@ -58,20 +56,8 @@ const submit = (myForm) => {
 }
 
 
-const captchaCheck = async (myForm) => {
-    const data = formDataToObject(new FormData(myForm))
-    dataFetch.body = JSON.stringify(data)
-    const response = await fetch(checkCaptchaUrl, dataFetch)
-    return response.json()
-}
-
-
-myForm?.addEventListener('submit', async (event) => {
+myForm?.addEventListener('submit', (event) => {
     event.preventDefault();
-    const antiBot = event.target.elements.anti_bot.value
-    if (antiBot !== "") {
-        return
-    }
 
     const name = event.target.elements.name.value.trim();
     const nameError = document.querySelector('#name + .errorMessage');
@@ -172,33 +158,28 @@ myForm?.addEventListener('submit', async (event) => {
         captchaInput.parentNode.classList.add('error');
         captchaInput.parentNode.classList.remove('success');
     } else {
+        captchaError.textContent = '';
+        captchaInput.parentNode.classList.add('success');
+        captchaInput.parentNode.classList.remove('error');
+    }
 
-        const result = await captchaCheck(myForm)
+    const antiBot = event.target.elements.anti_bot.value
+    let antiBotError = true
+    if (antiBot !== "") {
+        antiBotError = false
+    }
 
-        if (result.success) {
-            if (nameError.textContent === ''
-                && emailError.textContent === ''
-                && telError.textContent === ''
-                && themeError.textContent === ''
-                && form_textError.textContent === ''
-                && checkedError.textContent === ''
-            ) {
-                console.log("send")
-                submit(event.target);
-            }
-            captchaError.textContent = '';
-            captchaInput.parentNode.classList.add('success');
-            captchaInput.parentNode.classList.remove('error');
-        } else {
-            captchaError.textContent = 'Captcha zadán nesprávně';
-            captchaInput.parentNode.classList.add('error');
-            captchaInput.parentNode.classList.remove('success');
-        }
-
+    if (nameError.textContent === ''
+        && emailError.textContent === ''
+        && telError.textContent === ''
+        && themeError.textContent === ''
+        && form_textError.textContent === ''
+        && checkedError.textContent === ''
+        && antiBotError
+    ) {
+        submit(event.target);
     }
 
 })
-
-
 
 
