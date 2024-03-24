@@ -13,7 +13,8 @@
     "zip": "gulp zip",
     "code": "editorconfig-checker",
     "deploy": "gh-pages -d app",
-    "lint": "stylelint \"src/scss/*.scss\""
+    "lint": "stylelint \"src/scss/*.scss\"",
+    "lint_fix": "stylelint \"src/scss/*.scss\" --fix"
   },
   "author": "MaxGraph",
   "license": "ISC",

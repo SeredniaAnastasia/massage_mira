@@ -23,6 +23,13 @@
     .card__img__osvedceni {
         width: 90%;
         margin: 0 auto;
+
+        img {
+            border-radius: 20px;
+            border: 5px solid darkseagreen;
+            box-shadow: 15px 16px 33px 0px rgba(0, 0, 0, 1);
+
+        }
     }
 
 
@@ -30,10 +37,18 @@
 
     .card__text {
         padding: 27px;
+        border: 5px solid darkseagreen;
+        box-shadow: 15px 16px 33px 0px rgba(0, 0, 0, 1);
         font-size: 20px;
         background-color: rgba(255, 255, 255, 0.7);
         border-radius: 15px;
         margin-bottom: 15px;
+
+        p {
+            // font-family: "Patrick Hand", cursive;
+            font-family: "Kalam", cursive;
+            font-weight: 400;
+        }
     }
 
     .card__title {

@@ -134,12 +134,20 @@
 
     span {
         @extend %KaushanScript-400;
+        font-size: 50px;
+        display: block;
+        margin-bottom: 15px;
     }
 }
 
-.header__bottom-sumtitle {
-    @extend %Inter-500;
-    font-size: 20px;
+
+
+.header__bottom-subtitle {
+    // @extend %Inter-500;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
 }
 
 .header__bottom-decor {
