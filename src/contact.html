@@ -16,11 +16,18 @@
     })
     <main class="main">
 
+      <div class="visited">
+        <picture>
+          <source srcset="img/visited.webp" type="image/webp">
+          <img loading="lazy" src="img/visited.png" class="image" alt="">
+        </picture>
+      </div>
+
       <section class="contact">
         <div class="contact__wrapper">
           <form id="form">
             <input type="hidden" name="project_name" value="masazaazkvam">
-            <input type="hidden" name="admin_email" value="masazaazkvam@gmail.com">
+            <input type="hidden" name="admin_email" value="masazeazkvam@gmail.com">
             <input type="hidden" name="form_subject" value="masazaazkvam.cz">
 
             <div class="mb-3 formDetails">
@@ -34,7 +41,7 @@
             </div>
 
             <div class="form-outline mb-3 formDetails" style="width: 100%;">
-              <input class="input-active form-control" type="tel" name="telefon" id="tel" placeholder="+420 ">
+              <input class="input-active form-control" type="tel" name="telefon" id="tel" placeholder="tel: ">
               <div class="errorMessage"></div>
             </div>
 
@@ -70,8 +77,6 @@
             </div>
 
             <input type="text" id="anti_bot" name=":" style="display: none" value="" />
-            <!-- 6LebP6EpAAAAALV3APVLJGsn6XjM1n81UdTUreqs -->
-            <!-- 6LebP6EpAAAAAN5durtXzKiMiGIIcpKiXEfIYhZU -->
             <input class="button" value="Odeslat zprávu" type="submit">
           </form>
         </div>

@@ -131,6 +131,10 @@
     margin-bottom: 22px;
     @extend %Asap-400;
     font-size: clamp(1.56rem, 1.3318rem + 0.9735vw, 2.5rem);
+
+    span {
+        @extend %KaushanScript-400;
+    }
 }
 
 .header__bottom-sumtitle {

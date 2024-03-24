@@ -1,6 +1,18 @@
 .contact {
     padding-top: 100px;
     margin-bottom: 100px;
+
+}
+
+.visited {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    img {
+        border-radius: 20px;
+    }
 }
 
 .contact__wrapper {
