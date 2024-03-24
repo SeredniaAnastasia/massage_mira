@@ -267,8 +267,8 @@ const watchFiles = () => {
 
 const cache = () => {
   return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,woff2}`, {
-      base: buildFolder
-    })
+    base: buildFolder
+  })
     .pipe(rev())
     .pipe(revDel())
     .pipe(dest(buildFolder))
@@ -316,6 +316,25 @@ const toProd = (done) => {
   done();
 };
 
+
+// const ftp = require('vinyl-ftp');
+// const ftpSettings = {
+//   "host": "smm.zzz.com.ua",
+//   "user": "mystudy53",
+//   "pass": "mdcvsww8097K",
+//   "parallel": 10,
+//   "remotePath": "/wawe.smm.zzz.com.ua"
+// }
+// const chalk = require('chalk');
+// const connect = ftp.create(ftpSettings);
+
+// function deployFtp() {
+//   return src(['app/**/*.*', '!app/**/*.map'])
+//     .pipe(connect.newer('public_html/'))
+//     .pipe(connect.dest('public_html/'))
+//     .on('end', () => console.log(`Finished deploing ./build to https://${chalk.blueBright(ftpSettings.host)}`))
+// }
+
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, watchFiles);
 
 exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, svgSprites)
@@ -323,5 +342,7 @@ exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, reso
 exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, htmlMinify);
 
 exports.cache = series(cache, rewrite);
+
+// exports.deployFtp = deployFtp;
 
 exports.zip = zipFiles;
