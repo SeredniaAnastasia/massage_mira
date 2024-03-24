@@ -9,6 +9,7 @@
 <!-- masáž celého těla, masáž břicha, relaxační masáž masáž ruka, sportovní masáž, masáž zada, masáž hýždě -->
 
 <body class="page__body">
+
   <div class="site-container">
     @include('partials/header.html',{
     "index": "active-page",
@@ -113,6 +114,16 @@
         </section>
       </div>
     </main>
+    <?php
+    $url = $_SERVER['REQUEST_URI'];
+    echo $url;
+    echo "2222222222222222222";
+      $person = array(
+          "name" => "John",
+          "age" => 30,
+          "city" => "New York"
+      );
+  ?>
     @include('partials/footer.html')
     <!-- @include('html/h1.html') пример include -->
   </div>
