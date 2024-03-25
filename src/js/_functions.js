@@ -99,5 +99,5 @@ import { burger } from './functions/burger';
 
 // validateForms('#form', rules1, afterForm);
 
-
+// import './functions/animation';
 import './functions/my-validate-form';

@@ -1,62 +1,79 @@
 @import "../fonts";
 
 .services__item {
+  .services__card {
+    display: flex;
+    column-gap: 27px;
+  }
+
+  .card__img__wrapper {
+    flex-shrink: 0;
+    margin: 0 auto 20px;
+    width: 100%;
+    height: auto;
+    max-width: 370px;
+
+    .image {
+      border-radius: 15px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .card__img__osvedceni {
+    margin: 0 auto;
+    width: 90%;
+
+    img {
+      border: 5px solid darkseagreen;
+      border-radius: 20px;
+      box-shadow: 15px 16px 33px 0 rgb(0 0 0 / 100%);
+    }
+  }
+
+  .card__text {
+    margin-bottom: 15px;
+    border: 5px solid darkseagreen;
+    border-radius: 15px;
+    padding: 27px;
+    box-shadow: 15px 16px 33px 0 rgb(0 0 0 / 100%);
+    font-size: 20px;
+    background-color: rgb(255 255 255 / 70%);
+
+    p {
+      // font-family: "Patrick Hand", cursive;
+      font-family: "Kalam", cursive;
+      font-weight: 400;
+    }
+  }
+
+  .card__title {
+    font-weight: 600;
+    font-size: 24px;
+
+    p {
+      font-size: 20px;
+    }
+
+    @extend %Inter-500;
+  }
+
+  .card__btn {
+    border: none;
+    border-radius: 9px;
+    height: 43px;
+    min-width: 170px;
+    font-size: 20px;
+    color: white;
+    background-color: var(--dark-green);
+    cursor: pointer;
+
+    @extend %Karma-500;
+  }
+
+  @media (max-width: 900px) {
     .services__card {
-        display: flex;
-        column-gap: 27px;
+      flex-wrap: wrap;
     }
-
-    .card__img__wrapper {
-        max-width: 370px;
-        width: 100%;
-        height: auto;
-        flex-shrink: 0;
-        margin: 0 auto 20px;
-
-        .image {
-            width: 100%;
-            height: 100%;
-            border-radius: 15px;
-        }
-    }
-
-
-    .card__info {}
-
-    .card__text {
-        padding: 27px;
-        font-size: 20px;
-        background-color: rgba(255, 255, 255, 0.7);
-        border-radius: 15px;
-        margin-bottom: 15px;
-    }
-
-    .card__title {
-        @extend %Inter-500;
-        font-weight: 600;
-        font-size: 24px;
-
-        p {
-            font-size: 20px;
-        }
-    }
-
-    .card__btn {
-        @extend %Karma-500;
-        font-size: 20px;
-        min-width: 170px;
-        height: 43px;
-        background-color: var(--dark-green);
-        color: white;
-        border-radius: 9px;
-        border: none;
-        cursor: pointer;
-
-    }
-
-    @media(max-width: 900px) {
-        .services__card {
-            flex-wrap: wrap;
-        }
-    }
+  }
 }

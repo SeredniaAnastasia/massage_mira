@@ -5,6 +5,7 @@
 @import "mixins";
 @import "settings";
 @import "mixins/validate";
+
 // подключения компонентов страницы
 @import "./components/header";
 @import "./components/logo";
@@ -14,8 +15,7 @@
 @import "./components/card";
 @import "./components/contact";
 @import "./components/footer";
-
-
+// @import "./components/animation";
 
 
 // тестовые стили, удалите их

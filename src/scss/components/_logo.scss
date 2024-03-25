@@ -1,12 +1,11 @@
 .logo {
-    display: flex;
-    align-items: center;
-    flex-basis: 74px;
-    flex-shrink: 0;
+  display: flex;
+  flex-shrink: 0;
+  flex-basis: 74px;
+  align-items: center;
 
-    img {
-        height: 60px;
-        width: 74px;
-
-    }
+  img {
+    width: 100px;
+    height: auto;
+  }
 }

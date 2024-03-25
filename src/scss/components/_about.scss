@@ -1,26 +1,31 @@
 .about {
+  margin-bottom: 50px;
 
-    margin-bottom: 50px;
+  &__title {
+    margin-bottom: 25px;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+  }
 
-    &__title,
-    &__text {
-        color: #fff;
-        font-size: 26px;
-        padding: 20px;
-        background-color: var(--light-green);
-        max-width: 500px;
-        width: 100%;
-        border-radius: 20px;
-    }
+  &__text {
+    margin-left: auto;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-    &__title {
-        font-size: 26px;
-        margin-bottom: 25px;
-
-    }
-
-    &__text {
-        margin-left: auto;
-    }
-
+  &__title,
+  &__text {
+    border: 3px solid currentcolor;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 15px 15px 33px 0 rgb(0 0 0 / 100%);
+    font-size: 26px;
+    color: #fff;
+    background-color: var(--light-green);
+  }
 }

@@ -1,17 +1,17 @@
 .errorMessage {
-    margin-top: .3rem;
-    font-size: .9rem;
-    font-weight: 600;
-    font-family: monospace;
+  margin-top: 0.3rem;
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .formDetails.success input,
 .formDetails.success textarea {
-    border-color: #09c372;
-    outline: none;
+  outline: none;
+  border-color: #09c372;
 }
 
 .formDetails.error input,
 .formDetails.error textarea {
-    border-color: #f2070e;
+  border-color: #f2070e;
 }

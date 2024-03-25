@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="cs" class="page">
-
+<?php
+  $url = $_SERVER['REQUEST_URI'];
+  echo $url;
+  echo "2222222222222222222";
+    $person = array(
+        "name" => "John",
+        "age" => 30,
+        "city" => "New York"
+    );
+?>
 @include('partials/head.html',{
 "title": "Masáže k Vám domů| Simona Benešova",
 "description": "Nabízím masáže s možností u Vás doma. Sportovní masáž. Relaxační masáž.",
@@ -9,7 +18,10 @@
 <!-- masáž celého těla, masáž břicha, relaxační masáž masáž ruka, sportovní masáž, masáž zada, masáž hýždě -->
 
 <body class="page__body">
-
+  <!-- <div id="large-header" class="large-header">
+    <canvas id="demo-canvas"></canvas>
+    <h1 class="main-title">Connect <span class="thin">Three</span></h1>
+  </div> -->
   <div class="site-container">
     @include('partials/header.html',{
     "index": "active-page",
@@ -25,7 +37,7 @@
             doporučím nejvhodnější typ masáže.</p>
         </div>
         <section class="services">
-          <h2 class="services__title">Služby</h2>
+          <h2 class="services__title" style="display: none;">Služby</h2>
           <ul class="services__list">
             <li class="services__item">
               <div class="services__card">
@@ -73,22 +85,47 @@
               </div>
             </li>
 
+            <li class="services__item">
+              <div class="services__card">
+                <!-- <div class="card__img__wrapper">
+                  <picture>
+                    <source srcset="img/4.webp" type="image/webp">
+                    <img loading="lazy" src="img/4.png" class="image" width="370" height="450" alt="">
+                  </picture>
+                </div> -->
+                <div class="card__info">
+                  <article class="card__text">
+                    <h3 class="card__title">Používám oleje</h3>
+                    <p>
+                      Používám oleje Green Idea (Topvet)
+                      Český výrobce přírodních olejů a kosmetiky.
+                      Výrobce používá suroviny nejvyšší kvality. Záleží mu na životním prostředí a používá
+                      recyklovatelné obaly.
+                      Oleje mám oblíbené, protože výrobce je držitelem certifikátu NaTrue, což znamená že oleje obsahují
+                      pouze složky přírodního původu a v Bio kvalitě.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </li>
+
+            <li class="services__item">
+              <div class="services__card">
+                <div class="card__img__osvedceni">
+                  <picture>
+                    <source srcset="img/osvedceni.webp" type="image/webp">
+                    <img loading="lazy" src="img/osvedceni.png" class="image" alt="">
+                  </picture>
+                </div>
+              </div>
+            </li>
+
 
 
           </ul>
         </section>
       </div>
     </main>
-    <?php
-    $url = $_SERVER['REQUEST_URI'];
-    echo $url;
-    echo "2222222222222222222";
-      $person = array(
-          "name" => "John",
-          "age" => 30,
-          "city" => "New York"
-      );
-  ?>
     @include('partials/footer.html')
     <!-- @include('html/h1.html') пример include -->
   </div>

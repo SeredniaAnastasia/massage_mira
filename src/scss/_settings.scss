@@ -3,28 +3,27 @@ html {
 }
 
 .page__body {
-  min-width: 320px;
+  margin: 0;
+  border: 0;
+  padding: 0;
   height: 100%;
-  @extend %OpenSans-400;
+  min-width: 320px;
   font-size: 20px;
   background-size: cover;
-  background-color: #FFFFFF;
-  margin: 0;
-  padding: 0;
-  border: 0;
+  background-color: #fff;
+
+  @extend %OpenSans-400;
 }
 
-.page__body {}
-
-body:before {
-  background: url("../img/20-2x.jpg") no-repeat 50% / cover;
-  content: '';
-  top: 0;
-  bottom: 0;
+body::before {
+  content: "";
+  position: fixed;
   left: 0;
   right: 0;
-  position: fixed;
+  top: 0;
+  bottom: 0;
   z-index: -1;
+  background: url("../img/20-2x.jpg") no-repeat 50% / cover;
 }
 
 *,
@@ -39,7 +38,6 @@ body:before {
   -webkit-text-size-adjust: 100%;
 }
 
-
 img {
   height: auto;
   max-width: 100%;
@@ -53,14 +51,13 @@ a {
 .site-container {
   // overflow: hidden;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
 }
 
 .is-hidden {
   display: none !important;
-
 }
 
 .btn-reset {
@@ -107,7 +104,6 @@ a {
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
 }
-
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
