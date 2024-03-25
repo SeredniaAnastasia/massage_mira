@@ -11,6 +11,7 @@
     font-size: 28px;
     color: #fff;
     background-color: var(--light-green);
+    box-shadow: 15px 15px 33px 0 rgb(0, 0, 0);
     display: inline-block;
     border: 3px solid #fff;
     border-radius: 15px;
@@ -23,6 +24,8 @@
     height: auto;
     line-height: 1;
     text-align: left;
+    border: 3px solid greenyellow;
+    box-shadow: 15px 15px 33px 0 rgb(0, 0, 0);
 
     tr {
       padding-bottom: 10px;
@@ -68,8 +71,6 @@
 
   &__table-popis {
     height: 60px;
-
-    // @extend %Asap-400;
     font-size: 20px;
     color: #fff;
     background-color: var(--dark-green);

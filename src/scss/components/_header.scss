@@ -12,6 +12,7 @@
   min-height: 80px;
   font-size: 17px;
   background-color: var(--dark-green);
+  box-shadow: 15px 15px 33px 0 rgb(0, 0, 0);
   border: 3px solid #fff;
   border-radius: 15px;
 
@@ -112,6 +113,7 @@
 
 .header__bottom {
   background-color: var(--light-green);
+  box-shadow: 15px 15px 33px 0 rgb(0, 0, 0);
   border: 3px solid #fff;
   margin-right: 12px;
   margin-left: 12px;
