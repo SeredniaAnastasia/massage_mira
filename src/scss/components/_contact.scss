@@ -12,6 +12,11 @@
   img {
     border-radius: 20px;
   }
+
+  .image {
+    border: 3px solid #fff;
+    border-radius: 15px;
+  }
 }
 
 .contact__wrapper {
@@ -21,16 +26,35 @@
   width: 100%;
   max-width: 800px;
   background-color: rgb(255 255 255 / 43%);
+  border: 3px solid chartreuse;
 }
 
-.btn {
-  background-color: var(--dark-green);
+.button {
+  background-color: var(--light-green);
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  padding: 10px;
+  transition: background-color 0.3s ease-in-out;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--dark-green);
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      background-color: var(--dark-green);
+    }
+  }
 }
 
 .form-captcha__wrapper {
   display: flex;
   column-gap: 25px;
   flex-wrap: wrap;
+  max-width: 500px;
 
   .form-captcha__input {
     width: 100%;
