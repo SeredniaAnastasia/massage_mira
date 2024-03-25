@@ -7,7 +7,6 @@ header('Access-Control-Allow-Methods: *');
 header('Access-Control-Allow-Credentials: true');
 header("Content-Type: application/json; charset=UTF-8");
 
-
 $postData = file_get_contents('php://input');
 $data = json_decode($postData, true);
 
@@ -22,7 +21,7 @@ if($captcha != $_SESSION['rand_code']) {
 	["success" => false,
 	]
 );
-   
+
 }else {
    echo json_encode(
       ["success" => true,
