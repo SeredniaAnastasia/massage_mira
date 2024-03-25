@@ -2,46 +2,44 @@
 // colors
 
 %Asap-400 {
-  font-family: 'Asap-Regular', sans-serif;
+  font-family: "Asap-Regular", sans-serif;
   font-weight: 400;
 }
 
 %Asap-600 {
-  font-family: 'Asap-SemiBold', sans-serif;
+  font-family: "Asap-SemiBold", sans-serif;
   font-weight: 600;
 }
 
 %Inter-200 {
-  font-family: 'Inter-ExtraLight', sans-serif;
+  font-family: "Inter-ExtraLight", sans-serif;
   font-weight: 200;
 }
 
 %Inter-500 {
-  font-family: 'Inter-Medium', sans-serif;
+  font-family: "Inter-Medium", sans-serif;
   font-weight: 500;
 }
 
 %Inter-400 {
-  font-family: 'Inter-Regular', sans-serif;
+  font-family: "Inter-Regular", sans-serif;
   font-weight: 400;
 }
 
 %Karma-500 {
-  font-family: 'Karma-Medium', sans-serif;
+  font-family: "Karma-Medium", sans-serif;
   font-weight: 500;
 }
 
 %OpenSans-400 {
-  font-family: 'OpenSans-Regular', sans-serif;
+  font-family: "OpenSans-Regular", sans-serif;
   font-weight: 400;
 }
 
 %KaushanScript-400 {
-  font-family: 'KaushanScript-Regular', cursive;
+  font-family: "KaushanScript-Regular", cursive;
   font-weight: 400;
 }
-
-
 
 :root {
   // base
@@ -53,6 +51,6 @@
   // colors
   --white: #fff;
   --black: #000;
-  --light-green: #7D9457;
+  --light-green: #7d9457;
   --dark-green: #506233;
 }

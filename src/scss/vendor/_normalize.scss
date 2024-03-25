@@ -1,16 +1,14 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 ul,
 ol {
-	padding: 0;
-	list-style-type: none;
+  list-style-type: none;
+  padding: 0;
 }
-
 
 body,
 h1,
@@ -26,56 +24,46 @@ figcaption,
 blockquote,
 dl,
 dd {
-	margin: 0;
+  margin: 0;
 }
-
 
 body {
-	min-height: 100vh;
-	scroll-behavior: smooth;
-	text-rendering: optimizeSpeed;
-	line-height: 1.5;
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizespeed;
+  scroll-behavior: smooth;
 }
-
 
 ul,
 ol {
-	list-style: none;
-
-
+  list-style: none;
 }
-
 
 // a:not([class]) {
 // 	text-decoration-skip-ink: auto;
 // }
 
-
 img {
-	max-width: 100%;
-	display: block;
+  display: block;
+  max-width: 100%;
 }
 
-
-article>*+* {
-	margin-top: 1em;
+article > * + * {
+  margin-top: 1em;
 }
-
 
 input,
 button,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
-
-
 @media (prefers-reduced-motion: reduce) {
-	* {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }
