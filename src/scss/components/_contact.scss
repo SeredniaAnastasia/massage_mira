@@ -8,7 +8,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  box-shadow: 15px 15px 33px 0 rgb(0, 0, 0);
+  box-shadow: 15px 15px 33px 0 rgb(0 0 0);
 
   img {
     border-radius: 20px;
@@ -22,21 +22,21 @@
 
 .contact__wrapper {
   margin: 0 auto;
+  border: 3px solid chartreuse;
   border-radius: 10px;
-  box-shadow: 15px 15px 33px 0 rgb(0, 0, 0);
   padding: 10px;
   width: 100%;
   max-width: 800px;
+  box-shadow: 15px 15px 33px 0 rgb(0 0 0);
   background-color: rgb(255 255 255 / 43%);
-  border: 3px solid chartreuse;
 }
 
 .button {
-  background-color: var(--light-green);
-  color: #fff;
   border: 3px solid #fff;
   border-radius: 15px;
   padding: 10px;
+  color: #fff;
+  background-color: var(--light-green);
   transition: background-color 0.3s ease-in-out;
 
   @media (hover: hover) {
