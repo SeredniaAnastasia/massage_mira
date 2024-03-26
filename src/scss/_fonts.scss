@@ -75,3 +75,25 @@
   font-style: cursive;
   font-display: swap;
 }
+
+@font-face {
+  src:
+    local("PatrickHand-Regular"),
+    url("../fonts/PatrickHand-Regular.woff2") format("embedded-opentype"),
+    url("../fonts/PatrickHand-Regular.woff") format("embedded-opentype");
+  font-family: "PatrickHand-Regular";
+  font-weight: 400;
+  font-style: cursive;
+  font-display: swap;
+}
+
+@font-face {
+  src:
+    local("Kalam-Regular"),
+    url("../fonts/Kalam-Regular.woff2") format("embedded-opentype"),
+    url("../fonts/Kalam-Regular.woff") format("embedded-opentype");
+  font-family: "Kalam-Regular";
+  font-weight: 400;
+  font-style: cursive;
+  font-display: swap;
+}
