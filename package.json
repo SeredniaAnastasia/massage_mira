@@ -12,7 +12,9 @@
     "backend": "gulp backend",
     "zip": "gulp zip",
     "code": "editorconfig-checker",
-    "deploy": "gh-pages -d app"
+    "deploy": "gh-pages -d app",
+    "lint": "stylelint \"./src/scss/components/_card.scss\"",
+    "lint-fix": "stylelint \"./src/scss/components/_card.scss\" --fix"
   },
   "author": "MaxGraph",
   "license": "ISC",
