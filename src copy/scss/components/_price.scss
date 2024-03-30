@@ -1,0 +1,89 @@
+.price {
+  margin: 0 -10px 100px;
+  padding-top: 95px;
+  width: auto;
+  height: auto;
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 35px;
+    margin-left: 10px;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 15px 15px 33px 0 rgb(0 0 0);
+    font-size: 28px;
+    color: #fff;
+    background-color: var(--light-green);
+
+    @extend %Asap-600;
+  }
+
+  &__table {
+    border: 3px solid greenyellow;
+    border-spacing: 0;
+    width: 100%;
+    height: auto;
+    box-shadow: 15px 15px 33px 0 rgb(0 0 0);
+    line-height: 1;
+    text-align: left;
+
+    tr {
+      padding-bottom: 10px;
+      font-size: 20px;
+
+      .col-1 {
+        width: 40%;
+      }
+
+      .col-2 {
+        width: 30%;
+      }
+
+      .col-3 {
+        width: 30%;
+      }
+
+      @extend %Asap-400;
+    }
+
+    td {
+      padding: 10px;
+      padding-left: 30px;
+    }
+
+    tr + tr + tr:nth-child(even) {
+      background-color: rgb(255 255 255 / 40%);
+    }
+
+    tr + tr + tr:nth-child(odd) {
+      background-color: rgb(255 255 255 / 80%);
+    }
+  }
+
+  &__table-header {
+    height: 60px;
+
+    // @extend %Asap-400;
+    font-size: 20px;
+    color: #fff;
+    background-color: var(--light-green);
+  }
+
+  &__table-popis {
+    height: 60px;
+    font-size: 20px;
+    color: #fff;
+    background-color: var(--dark-green);
+  }
+
+  @media (max-width: 576px) {
+    .price__table tr {
+      font-size: 1rem;
+    }
+
+    .price__table td {
+      padding-left: 10px;
+    }
+  }
+}
