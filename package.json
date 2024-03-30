@@ -12,9 +12,7 @@
     "backend": "gulp backend",
     "zip": "gulp zip",
     "code": "editorconfig-checker",
-    "deploy": "gh-pages -d app",
-    "lint": "stylelint \"./src/scss/components/_card.scss\"",
-    "lint-fix": "stylelint \"./src/scss/components/_card.scss\" --fix"
+    "deploy": "gh-pages -d app"
   },
   "author": "MaxGraph",
   "license": "ISC",
@@ -56,7 +54,8 @@
     "stylelint-order": "^5.0.0",
     "typograf": "^6.14.1",
     "webpack": "^5.65.0",
-    "webpack-stream": "^7.0.0"
+    "webpack-stream": "^7.0.0",
+    "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.2",

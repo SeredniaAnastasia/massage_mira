@@ -738,8 +738,12 @@
     "scss/percent-placeholder-pattern": null,
     "scss/selector-no-redundant-nesting-selector": true
   },
-  "overrides": [{
-    "files": ["src/scss/*/**.scss"],
-    "customSyntax": "postcss-scss"
-  }]
+  "overrides": [
+    {
+      "files": [
+        "src/scss/*/**.scss"
+      ],
+      "customSyntax": "postcss-scss"
+    }
+  ]
 }
