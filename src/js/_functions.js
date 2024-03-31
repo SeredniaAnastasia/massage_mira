@@ -101,3 +101,4 @@ import { burger } from './functions/burger';
 
 // import './functions/animation';
 import './functions/my-validate-form';
+import './functions/setting';
