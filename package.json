@@ -14,7 +14,7 @@
     "code": "editorconfig-checker",
     "deploy": "gh-pages -d app",
     "lint": "stylelint \"src/scss/components/**.scss\"",
-    "lint_fix": "stylelint \"src/scss/mixins/*.scss\" --fix"
+    "lint_fix": "stylelint \"src/scss/components/*.scss\" --fix"
   },
   "author": "MaxGraph",
   "license": "ISC",
