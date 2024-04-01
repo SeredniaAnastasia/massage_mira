@@ -1,0 +1,78 @@
+.setting {
+  position: fixed;
+  max-width: 150px;
+  width: 100%;
+  z-index: 10000;
+  background-color: antiquewhite;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+
+  button,
+  p {
+    border-radius: 5px;
+    padding: 2px;
+  }
+
+
+
+  .header-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  .open {}
+}
+
+.setting-block {
+  display: none;
+}
+
+.setting-block.open {
+  display: block;
+}
+
+.setting-font__family {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.setting-font__family {
+  position: relative;
+  height: 3rem;
+  background-color: coral;
+}
+
+.setting-font__number {
+  display: block;
+  position: absolute;
+  text-align: center;
+  background-color: beige;
+  top: 36px;
+  right: 7px;
+
+}
+
+.setting__select-text {
+  margin-bottom: 10px;
+}
+
+.buttons-family {
+  margin-bottom: 10px;
+}
+
+.setting-font__weight,
+.setting-size,
+.buttons-style {
+  margin-bottom: 5px;
+  display: inline-block;
+
+}
+
+.setting .prev,
+.setting .next,
+.setting .normal,
+.setting .italic {
+  min-width: 50px;
+}

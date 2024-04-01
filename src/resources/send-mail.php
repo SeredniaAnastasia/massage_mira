@@ -41,10 +41,9 @@ file_put_contents('captcha.txt', date("d.m.y H:i:s  "). "REQUEST METHOD  " . $re
 if($captcha != $_SESSION['rand_code']) {
    echo json_encode(
 	["success" => false,
-     "message" => "Captcha byl zadán nesprávně: ", 
-     "captcha" => "error", 
-     "request_method" => $request_method,
-     "SESSION rand_code" => $_SESSION['rand_code'],
+     "message" => "Captcha byl zadán nesprávně: ",
+     "captcha" => "error",     "request_m  ethod" => $request_method,
+       "SESSION rand_code" => $_SESSION['rand_code'],
      "user_email " => $user_email ,
      "project_name " => $project_name ,
      "form_subject " => $form_subject ,
@@ -52,13 +51,13 @@ if($captcha != $_SESSION['rand_code']) {
      "user_phone " => $user_phone ,
      "captcha_text " => $captcha ,
      "form_predmet " => $form_predmet ,
-     "form_text " => $form_text 
+     "form_text " => $form_text
 	]
 );
    exit;
 }else{
 
-foreach ( $data as $key => $value ) {
+foreach ( $data as $key => $v a lue ) {
 file_put_contents('query1.txt', date("d.m.y H:i:s  ") .$key ." ". $value . "\r\n", FILE_APPEND);
 		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" && $key != "captcha") {
 			$message .= "
@@ -84,7 +83,6 @@ $userHeaders = "MIME-Version: 1.0" . "\r\n" .
 "From: " . $project_name . "\r\n" .
 "Reply-To: " . $admin_email . "" . "\r\n";
 
-
 if($user_email) {
    mail($user_email, adopt("Potvrzení o odeslání dopisu"), "Odeslali jste na stránku zprávu " . $project_name, $userHeaders);
 }
@@ -97,8 +95,9 @@ if (mail($admin_email, adopt($form_subject) , $message, $adminHeaders )) {
            exit;
 }
 
-} 
+}
 
 
 // }
 ?>
+

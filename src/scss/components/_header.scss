@@ -18,8 +18,8 @@
 
   &-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding-right: 11%;
     padding-left: 50px;
     min-height: 80px;
@@ -34,8 +34,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
   margin-bottom: 0;
+  height: 100%;
   gap: 50px;
 }
 
@@ -63,7 +63,6 @@
       background-color: var(--white);
     }
   }
-
 }
 
 .active-page {
@@ -72,21 +71,20 @@
 }
 
 .header__contact {
+  position: relative;
   display: flex;
   align-items: center;
   padding-left: 40px;
-  position: relative;
 
   a {
-    display: block;
     position: relative;
+    display: block;
     border-radius: 9px;
     padding: 5px 10px;
     font-size: inherit;
     color: var(--white);
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     cursor: pointer;
-
 
     @extend %Inter-400;
 
@@ -109,41 +107,39 @@
 
   .header__contact-img {
     position: absolute;
-    width: 31px;
-    height: 31px;
     left: -33px;
     top: 0;
+    width: 31px;
+    height: 31px;
     animation: spin 1.2s infinite ease-in-out;
   }
 
   @keyframes spin {
     0% {
-      transform: rotate(0deg) scale(1) skew(1deg)
+      transform: rotate(0deg) scale(1) skew(1deg);
     }
 
     10% {
-      transform: rotate(-25deg) scale(1) skew(1deg)
+      transform: rotate(-25deg) scale(1) skew(1deg);
     }
 
     20% {
-      transform: rotate(25deg) scale(1) skew(1deg)
+      transform: rotate(25deg) scale(1) skew(1deg);
     }
 
     30% {
-      transform: rotate(-25deg) scale(1) skew(1deg)
+      transform: rotate(-25deg) scale(1) skew(1deg);
     }
 
     40% {
-      transform: rotate(25deg) scale(1) skew(1deg)
+      transform: rotate(25deg) scale(1) skew(1deg);
     }
 
     100%,
     50% {
-      transform: rotate(0deg) scale(1) skew(1deg)
+      transform: rotate(0deg) scale(1) skew(1deg);
     }
-
   }
-
 }
 
 .header__bottom {
@@ -221,17 +217,16 @@
   .menu-list {
     position: fixed;
     left: 12px;
-    top: 10px;
+    top: 80px;
     z-index: 10;
+    flex-direction: column;
     border: 3px solid #fff;
     border-radius: 15px;
-    width: calc(100% - 24px);
-    min-height: 80px;
-    box-shadow: 15px 15px 33px 0 rgb(0, 0, 0);
-    top: 80px;
-    flex-direction: column;
     padding: 20px;
+    width: calc(100% - 24px);
     height: auto;
+    min-height: 80px;
+    box-shadow: 15px 15px 33px 0 rgb(0 0 0);
     background-color: #6c8346;
     transform: translateY(-200%);
     transition: transform 0.5s ease-in-out;
@@ -255,9 +250,7 @@
         left: -50px;
         top: 4px;
       }
-
     }
-
   }
 
   .header__contact .header__contact-img {

@@ -1,10 +1,11 @@
 // базовые подключения
-@import "fonts";
 @import "vars";
 @import "bootstrap.min";
 @import "mixins";
+@import "fonts";
 @import "settings";
 @import "mixins/validate";
+@import "mixins/seting";
 
 // подключения компонентов страницы
 @import "./components/header";
@@ -15,4 +16,3 @@
 @import "./components/card";
 @import "./components/contact";
 @import "./components/footer";
-// @import "./components/animation";

@@ -4,6 +4,10 @@
     column-gap: 27px;
   }
 
+  .card__info {
+    flex-grow: 1;
+  }
+
   .card__img__wrapper {
     flex-shrink: 0;
     margin: 0 auto 20px;

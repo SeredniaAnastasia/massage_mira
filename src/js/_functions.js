@@ -21,7 +21,7 @@ console.log(mobileCheck())
 // import './functions/fix-fullheight';
 
 // Реализация бургер-меню
-import { burger } from './functions/burger';
+import './functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './functions/disable-scroll';
@@ -101,3 +101,4 @@ import { burger } from './functions/burger';
 
 // import './functions/animation';
 import './functions/my-validate-form';
+import './functions/setting';
