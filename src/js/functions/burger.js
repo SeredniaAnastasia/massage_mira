@@ -41,9 +41,6 @@ import { enableScroll } from '../functions/enable-scroll';
 //   });
 // })();
 
-
-
-
 (function burger() {
   const burger = document?.querySelector('[data-burger]')
   const menu = document?.querySelector('[data-menu]')

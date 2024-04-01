@@ -1,5 +1,4 @@
 .site-container {
-
   .footer {
     font-size: 18px;
     color: #fff;
@@ -32,6 +31,41 @@
       margin-bottom: 10px;
     }
 
+    .day {
+      display: block;
+      float: left;
+      width: 50%;
+      height: auto;
+    }
+
+    .time {
+      display: block;
+      float: left;
+      width: 50%;
+      height: auto;
+    }
+
+    &__bottom {
+      background-color: var(--dark-green);
+    }
+
+    &__bottom-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      min-height: 50px;
+    }
+
+    .copyright {
+      margin-bottom: 0;
+    }
+
+    .copyright a {
+      color: #fff;
+    }
+
     &__phone,
     &__email {
       display: inline-block;
@@ -55,47 +89,12 @@
       }
     }
 
-    .day {
-      display: block;
-      float: left;
-      width: 50%;
-      height: auto;
-    }
-
-    .time {
-      display: block;
-      float: left;
-      width: 50%;
-      height: auto;
-    }
-
-    &__bottom {
-      background-color: var(--dark-green);
-    }
-
     &__top,
     &__bottom {
       margin: 0 12px 15px;
       border: 3px solid #fff;
       border-radius: 15px;
-      box-shadow: 15px 15px 33px 0 rgb(0, 0, 0);
-    }
-
-    &__bottom-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 5px;
-      min-height: 50px;
-    }
-
-    .copyright {
-      margin-bottom: 0;
-    }
-
-    .copyright a {
-      color: #fff;
+      box-shadow: 15px 15px 33px 0 rgb(0 0 0);
     }
 
     @extend %Inter-400;

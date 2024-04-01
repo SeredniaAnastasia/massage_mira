@@ -2,7 +2,18 @@
 @mixin font-face($font-family, $url, $weight, $style) {
   @font-face {
     font-family: "#{$font-family}";
-    src: url('../fonts/#{$url}.woff2') format("woff2");
+    src: url('../fonts/#{$url}.woff2') format("embedded-opentype");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+
+@mixin font-face-two($font-family, $url1, $url2, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url('../fonts/#{$url1}.woff') format("embedded-opentype");
+    src: url('../fonts/#{$url2}.woff2') format("embedded-opentype");
     font-weight: #{$weight};
     font-display: swap;
     font-style: $style;
