@@ -1,8 +1,10 @@
 .price {
-  margin: 0 -10px 100px;
-  padding-top: 95px;
+  margin: 0 2px 100px;
+  padding: 25px 0px 0;
   width: auto;
   height: auto;
+  border: 3px solid greenyellow;
+  border-radius: 10px;
 
   &__title {
     display: inline-block;
@@ -15,16 +17,18 @@
     font-size: 28px;
     color: #fff;
     background-color: var(--light-green);
-
     @extend %Asap-600;
   }
 
   &__table {
-    border: 3px solid greenyellow;
+    border-top: 3px solid greenyellow;
+    border-bottom: 3px solid greenyellow;
+    border-right: 3px solid greenyellow;
     border-spacing: 0;
     width: 100%;
+    margin-bottom: 37px;
     height: auto;
-    box-shadow: 15px 15px 33px 0 rgb(0 0 0);
+    box-shadow: 15px 15px 33px 0 rgb(0, 0, 0);
     line-height: 1;
     text-align: left;
 
@@ -52,11 +56,11 @@
       padding-left: 30px;
     }
 
-    tr + tr + tr:nth-child(even) {
+    tr+tr:nth-child(even) {
       background-color: rgb(255 255 255 / 40%);
     }
 
-    tr + tr + tr:nth-child(odd) {
+    tr+tr:nth-child(odd) {
       background-color: rgb(255 255 255 / 80%);
     }
   }

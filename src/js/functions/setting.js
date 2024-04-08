@@ -44,48 +44,81 @@ const settingFontWeight = document.querySelector('.setting .setting-font__weight
 const settingFontSize = document.querySelector('.setting .setting-size');
 
 let eventTarget = null;
-function iteratorFont(dataFont) {
-  let current = 0;
-  const limit = dataFont.length;
+
+
+function iteratorArray(array, startCurrent = 0) {
+  let current = startCurrent;
+  const limit = array.length;
   return {
     next: function () {
       if (current < limit) {
         if (current < limit - 1) current++
-        return { value: dataFont[current], done: false, current, };
+        return { value: array[current], done: false, current, };
       }
     },
     prev: function () {
       if (current >= 0) {
         if (current > 0) current--
-        return { value: dataFont[current], done: false, current, };
-      }
-    }
-  }
-}
-
-const newFont = iteratorFont(dataFont);
-
-function iteratorWeight(current = 100) {
-  const weightStart = 100;
-  const weightEnd = 1000;
-  const stepWeight = 100
-  return {
-    next: function () {
-      if (current < weightEnd) {
-        if (current < weightEnd - 100) current += stepWeight
-        return { value: current, done: false, };
+        return { value: array[current], done: false, current, };
       }
     },
-    prev: function () {
-      if (current >= weightStart) {
-        if (current > weightStart) current -= stepWeight;
-        return { value: current, done: false, };
-      }
-    }
+    setCurrent(index) { current = index; }
   }
 }
 
-let newWeight = iteratorWeight(100);
+
+const newFont = iteratorArray(dataFont);
+const newArrayWeight = Array.from({ length: 9 }, (_, i) => (i + 1) * 100)
+const newWeight = iteratorArray(newArrayWeight, 3);
+
+const newArrayFontSize = Array.from({ length: 95 }, (_, i) => i + 5)
+
+const newFontSize = iteratorArray(newArrayFontSize, newArrayFontSize.indexOf(16));
+
+
+// function iteratorFont(dataFont) {
+//   let current = 0;
+//   const limit = dataFont.length;
+//   return {
+//     next: function () {
+//       if (current < limit) {
+//         if (current < limit - 1) current++
+//         return { value: dataFont[current], done: false, current, };
+//       }
+//     },
+//     prev: function () {
+//       if (current >= 0) {
+//         if (current > 0) current--
+//         return { value: dataFont[current], done: false, current, };
+//       }
+//     }
+//   }
+// }
+
+// const newFont = iteratorFont(dataFont);
+
+// function iteratorWeight(current = 100) {
+//   const weightStart = 100;
+//   const weightEnd = 1000;
+//   const stepWeight = 100
+//   return {
+//     next: function () {
+//       if (current < weightEnd) {
+//         if (current < weightEnd - 100) current += stepWeight
+//         return { value: current, done: false, };
+//       }
+//     },
+//     prev: function () {
+//       if (current >= weightStart) {
+//         if (current > weightStart) current -= stepWeight;
+//         return { value: current, done: false, };
+//       }
+//     }
+//   }
+// }
+
+
+
 
 
 function iteratorSize(current = 16) {
@@ -107,7 +140,7 @@ function iteratorSize(current = 16) {
     }
   }
 }
-let newFontSize = iteratorSize(16);
+
 
 
 
@@ -123,12 +156,12 @@ document.body.addEventListener('click', (event) => {
     const elementStyle = window.getComputedStyle(eventTarget);
 
     const fontWight = +elementStyle.fontWeight;
-    newWeight = iteratorWeight(fontWight);
-    settingFontWeight.innerText = fontWight
+    newWeight.setCurrent(newArrayWeight.indexOf(fontWight));
+    settingFontWeight.innerText = fontWight;
 
 
     const fontSize = elementStyle.fontSize;
-    newFontSize = iteratorSize(parseInt(fontSize));
+    newFontSize.setCurrent(newArrayFontSize.indexOf(parseInt(fontSize)));
     settingFontSize.innerText = fontSize;
 
 

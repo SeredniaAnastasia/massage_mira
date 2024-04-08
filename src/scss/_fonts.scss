@@ -1,13 +1,13 @@
 // @include font-face("Muller", "/fonts/MullerRegular", 400, normal);
-@include font-face-two("Asap-Regular", "../fonts/Asap-Regular.woff", "../fonts/Asap-Regular.woff2", 400, normal);
-@include font-face-two("Asap-SemiBold", "../fonts/Asap-SemiBold.woff", "../fonts/Asap-SemiBold.woff2", 600, normal);
-@include font-face-two("Inter-ExtraLight", "../fonts/Inter-ExtraLight.woff", "../fonts/Inter-ExtraLight.woff2", 200, normal);
-@include font-face-two("Inter-Medium", "../fonts/Inter-Medium.woff", "../fonts/Inter-Medium.woff2", 500, normal);
-@include font-face-two("Inter-Regular", "../fonts/Inter-Regular.woff", "../fonts/Inter-Regular.woff2", 400, normal);
-@include font-face-two("Karma-Medium", "../fonts/Karma-Medium.woff", "../fonts/Karma-Medium.woff2", 500, normal);
-@include font-face-two("GreatVibes-Regular", "../fonts/GreatVibes-Regular.woff", "../fonts/GreatVibes-Regular.woff2", 400, cursive);
-@include font-face-two("PatrickHand-Regular", "../fonts/PatrickHand-Regular.woff", "../fonts/PatrickHand-Regular.woff2", 400, cursive);
-@include font-face-two("Kalam-Regular", "../fonts/Kalam-Regular.woff", "../fonts/Kalam-Regular.woff2", 400, cursive);
+@include font-face-two("Asap-Regular", "Asap-Regular", "Asap-Regular", 400, normal);
+@include font-face-two("Asap-SemiBold", "Asap-SemiBold", "Asap-SemiBold", 600, normal);
+@include font-face-two("Inter-ExtraLight", "Inter-ExtraLight", "Inter-ExtraLight", 200, normal);
+@include font-face-two("Inter-Medium", "Inter-Medium", "Inter-Medium", 500, normal);
+@include font-face-two("Inter-Regular", "Inter-Regular", "Inter-Regular", 400, normal);
+@include font-face-two("Karma-Medium", "Karma-Medium", "Karma-Medium", 500, normal);
+@include font-face-two("GreatVibes-Regular", "GreatVibes-Regular", "GreatVibes-Regular", 400, cursive);
+@include font-face-two("PatrickHand-Regular", "PatrickHand-Regular", "PatrickHand-Regular", 400, cursive);
+@include font-face-two("Kalam-Regular", "Kalam-Regular", "Kalam-Regular", 400, cursive);
 
 
 // @font-face {

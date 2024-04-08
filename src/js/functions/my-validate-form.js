@@ -37,26 +37,28 @@ const submit = (myForm) => {
   fetch(mailPathUrl, dataFetch)
     .then(response => response.json())
     .then(result => {
-      const captchaError = document.querySelector('#captcha + .errorMessage');
+
+      const captchaError = document.querySelector('.form-captcha__wrapper  .errorMessage');
       const captchaInput = document.getElementById('captcha');
+      captchaError && (captchaError.textContent = '');
+
+      if (captchaInput) {
+        captchaInput.parentNode.classList.add('success')
+        captchaInput.parentNode.classList.remove('error');
+      }
+
       if (result.success) {
         alert("Dopis byl odeslán");
-        captchaError.textContent = '';
-        captchaInput.parentNode.classList.add('success');
-        captchaInput.parentNode.classList.remove('error');
         window.location.reload();
       } else {
         alert("Zpráva nebyla odeslána, došlo k chybě:  " + result.message);
-        captchaError.textContent = '';
-        captchaInput.parentNode.classList.add('success');
-        captchaInput.parentNode.classList.remove('error');
       }
     })
     .catch(error => {
+      alert("Zpráva nebyla odeslána, došlo k chybě:  ");
       console.error('Error:', error);
     });
 }
-
 
 const captchaCheck = async (myForm) => {
   const data = formDataToObject(new FormData(myForm))
@@ -64,7 +66,6 @@ const captchaCheck = async (myForm) => {
   const response = await fetch(checkCaptchaUrl, dataFetch)
   return response.json()
 }
-
 
 myForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
