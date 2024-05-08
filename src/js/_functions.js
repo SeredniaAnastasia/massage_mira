@@ -101,4 +101,28 @@ import './functions/burger';
 
 // import './functions/animation';
 import './functions/my-validate-form';
-import './functions/setting';
+// import './functions/setting';
+
+
+
+import Inputmask from "inputmask";
+const telSelector = document.querySelector('.input-active-tel');
+// const telSelector = form?.querySelector('input[type="tel"]');
+// 
+if (telSelector) {
+    const inputMask = new Inputmask('+420 999-999-999');
+    inputMask.mask(telSelector);
+
+    for (let item of rules) {
+        if (item.tel) {
+            item.rules.push({
+                rule: 'function',
+                validator: function () {
+                    const phone = telSelector.inputmask.unmaskedvalue();
+                    return phone.length === 10;
+                },
+                errorMessage: item.telError
+            });
+        }
+    }
+}

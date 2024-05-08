@@ -48,8 +48,8 @@ img {
   max-width: 100%;
 }
 
-article > * + * {
-  margin-top: 1em;
+article>*+* {
+  // margin-top: 1em;
 }
 
 input,

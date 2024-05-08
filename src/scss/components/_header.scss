@@ -4,6 +4,8 @@
 }
 
 .header__top {
+  animation: Move2 1s;
+
   position: fixed;
   left: 12px;
   top: 10px;
@@ -149,6 +151,7 @@
   border-radius: 15px;
   box-shadow: 15px 15px 33px 0 rgb(0 0 0);
   background-color: var(--light-green);
+  animation: Move3 1s ease-out;
 
   &-wrapper {
     display: flex;
@@ -156,6 +159,7 @@
     justify-content: space-around;
     padding: 0 30px;
   }
+
 }
 
 .header__bottom-text {
@@ -278,4 +282,46 @@
   .header__bottom-sumtitle {
     font-size: 17px;
   }
+}
+
+@keyframes Move2 {
+
+
+  0% {
+
+    transform: translateY(-120%);
+  }
+
+  30% {
+
+    transform: translateY(-120%);
+  }
+
+  100% {
+    transform: translateY();
+
+  }
+
+}
+
+@keyframes Move3 {
+
+
+  0% {
+
+    transform: translateY(-150%);
+
+  }
+
+  80% {
+
+    // transform: translateY(-200%);
+  }
+
+  100% {
+    transform: translateY();
+
+
+  }
+
 }
